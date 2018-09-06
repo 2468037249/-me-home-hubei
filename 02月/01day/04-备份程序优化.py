@@ -10,8 +10,13 @@ dian = name.find('-')
 newname = name[dian+1:pos] + '备份.txt'
 
 
-ff = open(newname,'w')
-ff.write(content)
+f1 = open(newname,'w')
+while True:
+	content = f.read(1024)
+	f1.write(content)
+	if len(content) == 0:
+		break
+	f1.write(content)
 
 f.close()
-ff.close()
+f1.close()
